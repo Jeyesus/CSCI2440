@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by TEMPLATED
+http://templated.co
+Released for free under the Creative Commons Attribution License
+
+Name       : Prospect 
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20130902
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+
+
+		
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="js/fakeLoader.min.js"></script>
+        <div class="fakeLoader"></div>
+
+
+<link href='http://fonts.googleapis.com/css?family=Englebert|Open+Sans:400,600,700' rel='stylesheet' type='text/css' />
+<link href="default.css" rel="stylesheet" type="text/css" media="all" />
+
+    
+        
+        
+<!--[if IE 6]>
+<link href="default_ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+
+
+
+<script src="javascript/prototype.js" type="text/javascript"></script>
+<script src="javascript/scriptaculous.js" type="text/javascript"></script>
+
+
+<script type = "text/javascript">
+			
+        function ShowEffect(element){
+            new Effect.Appear(element, {duration:1, from:0, to:1.0});
+        }
+        function HideEffect(element){
+            new Effect.Appear(element, {duration:0, from:1.0, to:0});
+        }
+		 
+        function DropOutEffect(element){
+            new Effect.DropOut(element, {duration:3});
+        }
+		 
+		function ShrinkEffect(element){
+            new Effect.Shrink(element, {duration:3});
+        }
+		 
+		function FoldEffect(element){
+            new Effect.Fold(element, {duration:3});
+        }
+
+		function myMove() {
+			var elem = document.getElementById("myAnimation");   
+			var pos = 0;
+			var id = setInterval(frame, 10);
+		function frame() {
+			if (pos == 1000) {
+			clearInterval(id);
+			document.getElementById("myAnimation").style.visibility = "hidden";
+			} 
+			else if (pos < 300) {
+			pos += 100; 
+			elem.style.top = pos + 'px'; 
+			}
+			else if (pos == 300) {
+			pos++; 
+			new Effect.Appear(myAnimation, {duration:5, from:1.0, to:0});
+			}
+			else {
+			document.getElementById("myAnimation").style.visibility = "visible";	
+			pos++; 
+			elem.style.left = pos + 'px'; 
+    }
+  }
+}
+		 
+		 
+		 
+		 
+</script>
+
+</head>
+
+<div class="fakeLoader"></div>
+<body onload = "HideEffect(secret);">
+
+<img src="images/img03.png" alt="warning" id="myAnimation" />	  
+	  
+<div id="header" class="container">
+	<div id="logo">
+		<h1><a href="#">Item#243321</a></h1>
+	</div>
+</div>
+<div id="wrapper" class="container">
+	<div id="page">
+		<div id="content" onclick = "DropOutEffect(this);"> <a href="#" class="image-style"><img src="images/img02.jpg" width="600" height="250" alt="" /></a>
+			<h2>Adit Stone</h2>
+					<p>These are <strong>genuine</strong> adit stones, perfect for use in some structures
+					and definitely super real.  Collected from right outside of a <strong>genuine</strong>
+					mine where things are dug out of the ground, you can be sure these rocks were probably
+					down there once also.
+					</p>
+					<p>I have heard of people using these rocks for things like, a retaining wall, 
+					the side of a house that you want to make look fancy, the bottom of a pool for fish,
+					a pile of rocks, and many other uses.
+					</p>
+		<a onclick="myMove()" class="link-style1">Purchase</a></div>
+
+		
+		<div id="secret" onclick = "ShowEffect(secret);">
+					<p> Well done.  Well done.  you've seen through enough tricks here
+						to deserve a <strong>real</strong> challenge.
+					</p>
+		</div>
+		<div id="sidebar">
+			<div id="sbox1" onclick = "FoldEffect(this);">
+				<h2>Choose a Size:</h2>
+				<ul class="list-style1">
+					<li class="first">
+						<h3>very very small</h3>
+						<p>326 left in stock.</p>
+					</li>
+					<li>
+						<h3>very small</h3>
+						<p>13 left in stock.</p>
+					</li>
+					<li>
+						<h3>big</h3>
+						<p>4 left in stock.</p>
+					</li>
+				</ul>
+			</div>
+			<div id="sbox2" onclick = "ShrinkEffect(this);">
+				<h2>Choose a Color</h2>
+					<ul class="list-style2">
+						<li class="first"><a href="#">light gray</a></li>
+						<li><a href="#">gray</a></li>
+						<li><a href="#">dark grey</a></li>
+						<li><a href="node_modules/demo/demo1.html">sort of black</a></li>
+					</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="footer">
+	<p>&copy; Untitled. All rights reserved. Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>. Photos by <a href="http://fotogrph.com/">Fotogrph</a>.</p>
+</div>
+
+
+</body>
+</html>
